@@ -31,7 +31,7 @@ ba_zones allows you to create zones, assign a blip or a radius to them. you can 
 * **Peace Zone** - Too many killings in the zone? Disable PVP
 * **Routing** - You can divide the zones by buckets (MORE FPS)
 
-Inside **client.lua** are examples of how to create a zone.
+Inside **config.lua** are examples of how to create a zone.
 
 ## **Dependencies**:
 * [ox_lib](https://github.com/overextended/ox_lib/releases)
@@ -46,4 +46,10 @@ ensure ba_zones
 ```
 
 If you incounter any issues downloading, you can ask for help in [my discord](https://discord.gg/bairesrp).
+
+**EDIT:** If you are using pma-voice and you are using the dimension change option, uncomment it in server/main.lua. It should look something like this:
+```
+SetEntityRoutingBucket(veh, id)
+exports['pma-voice']:updateRoutingBucket(source, id)
+```
 
